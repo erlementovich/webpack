@@ -54,14 +54,23 @@ h4 {
   font-size: $h4;
   font-family: OpenSans;
 }
+h5 {
+  font-size: $h5;
+  font-family: OpenSans;
+}
 
 p {
-    font-size: $p;
-    font-family: OpenSans;
-  }
+  font-size: $p;
+  font-family: OpenSans;
+}
 li {
-    font-size: $h2;
-    font-family: OpenSans;
-    list-style-type: none;
-    font-weight: 400;
+  font-size: $h2;
+  font-family: OpenSans;
+  list-style-type: none;
+  font-weight: 400;
+}
+
+label {
+  font-size: $label;
+  font-family: OpenSans;
 }
