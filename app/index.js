@@ -1,7 +1,8 @@
+// JS
 import './js/common.js'
 
-import './scss/main.scss'
-
+// SCSS
+import './assets/scss/main.scss'
 //window.Vue = require('vue')
 //import store from './store'
 

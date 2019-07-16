@@ -1,0 +1,67 @@
+//BigJohn
+@font-face {
+  font-family: "BigJohn";
+  src: url("../fonts/BigJohn.otf");
+}
+//OpenSans
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSansRegular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSansSemiBold.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSansBold.ttf");
+  font-weight: 600;
+}
+
+//SourceSansProLight
+@font-face {
+  font-family: "SourceSans";
+  src: url("../fonts/SourceSansProLight.ttf");
+}
+
+//RobotoLight
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/RobotoLight.ttf");
+}
+
+//h1,h2,h3,h4,h5,p
+
+h1 {
+  font-size: $h1;
+  font-family: SourceSans;
+  text-transform: uppercase;
+}
+h2 {
+  font-size: $h2;
+  font-family: BigJohn;
+}
+
+h3 {
+  font-size: $h3;
+  font-family: SourceSans;
+}
+h4 {
+  font-size: $h4;
+  font-family: OpenSans;
+}
+
+p {
+    font-size: $p;
+    font-family: OpenSans;
+  }
+li {
+    font-size: $h2;
+    font-family: OpenSans;
+    list-style-type: none;
+    font-weight: 400;
+}

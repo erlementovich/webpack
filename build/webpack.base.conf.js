@@ -53,6 +53,12 @@ module.exports = {
                         scss: 'vue-style-loader!css-loader!sass-loader'
                     }
                 }
+            }, {
+                test: /\.(woff(2)?|ttf|otf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]'
+                }
             },
             {
                 test: /\.(png|jpg|gif|svg)$/,
@@ -100,7 +106,8 @@ module.exports = {
             filename: './index.html'
         }),
         new CopyWebpackPlugin([
-            { from: `${PATHS.app}/img`, to: `${PATHS.assets}img` },
+            { from: `${PATHS.app}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
+            { from: `${PATHS.app}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
             //{ from: `${PATHS.app}/static`, to: '' }
         ])
     ]
