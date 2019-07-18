@@ -1,0 +1,43 @@
+//buttons
+.btn1 {
+  background: none;
+  border: 1px solid $btn1;
+  border-radius: 20px;
+  width: 140px;
+  padding: 7px 0 7px 0;
+  color: $btn1;
+  font-size: $button;
+  font-family: OpenSans;
+  cursor: pointer;
+}
+
+.block__title {
+  margin: auto;
+  padding-top: 75px;
+  text-align: center;
+  width: 35%;
+  h3 {
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+  p {
+    padding-bottom: 56px;
+  }
+}
+
+.icons {
+  img {
+    width: 53px;
+  }
+}
+
+.description {
+  h3 {
+    font-family: OpenSans;
+    letter-spacing: 1px;
+    margin-bottom: 28px;
+  }
+  h4 {
+    color: $pColor;
+  }
+}
