@@ -1,0 +1,68 @@
+.portfolio {
+  background: $bg2;
+  .block__title {
+    margin-top: -5px;
+  }
+}
+
+.portfolio__content {
+  max-width: $portfWidth;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content__filters {
+  padding-top: 16px;
+  max-width: 580px;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.label__bottom {
+  // Добавляем при нажатии на label
+  border-bottom: 2px solid $labelBottom;
+  padding-bottom: 10px;
+}
+.content__grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+.wrap__title {
+  .h3Bottom {
+    width: 25px;
+    border-bottom: 1px solid $labelBottom;
+  }
+  em {
+    font-weight: 400;
+  }
+  h3 {
+    width: 140px;
+    padding-bottom: 10px;
+  }
+}
+//images
+.img__wrap {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-self: stretch;
+}
+
+.wrap__image {
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+.wrap__title {
+  display: flex;
+  flex-direction: column;
+  grid-area: 1 / 1 / 2 / 2;
+  align-self: center;
+}
+.title__image {
+    h5 {
+        width: 200px;
+    }
+}
