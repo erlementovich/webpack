@@ -10,10 +10,12 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .content__filters {
+  label {
+    cursor: pointer;
+  }
   padding-top: 16px;
   max-width: 580px;
   margin: auto;
@@ -29,40 +31,74 @@
 }
 .content__grid {
   display: flex;
-  flex-wrap: wrap;
 }
 .wrap__title {
+  padding-left: 30px;
   .h3Bottom {
     width: 25px;
     border-bottom: 1px solid $labelBottom;
+    margin-bottom: 25px;
   }
   em {
     font-weight: 400;
   }
   h3 {
     width: 140px;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
+  }
+  h5 {
+    margin-bottom: 20px;
   }
 }
 //images
 .img__wrap {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  align-self: stretch;
+  transition: 0.4s;
+}
+
+.closeMe {
+    display: none;
+}
+
+.img__wrap:hover {
+  .wrap__image {
+    img {
+      transition: 0.5s;
+      opacity: 0.25;
+    }
+  }
 }
 
 .wrap__image {
+  margin: 5px;
   grid-area: 1 / 1 / 2 / 3;
+  display: grid;
+  img {
+    z-index: 1;
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .image__hover {
+    z-index: 0;
+    grid-area: 1 / 1 / 2 / 2;
+    background: black;
+  }
 }
 
 .wrap__title {
+  opacity: 0;
+  z-index: 1;
+  color: $portTitle;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
   grid-area: 1 / 1 / 2 / 2;
-  align-self: center;
+  transition: 0.5s;
 }
-.title__image {
-    h5 {
-        width: 200px;
-    }
+
+.img__icons {
+  img {
+    cursor: pointer;
+    width: 28px;
+  }
 }
