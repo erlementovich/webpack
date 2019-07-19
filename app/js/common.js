@@ -10,7 +10,7 @@ filters.addEventListener('click', function (e) {
     for (var i = 0; i < arrGrid.length; i++) {
         if (arrGrid[i].classList.contains(id)) {
             //e.target.classList.add("label__bottom"); доработать
-            arrGrid[i].style.display = "block";
+            arrGrid[i].style.display = "grid";
         } else {
             arrGrid[i].style.display = "none";
         }

@@ -14,27 +14,30 @@
 
 .content__filters {
   label {
+    padding-bottom: 20px;
     cursor: pointer;
+    margin-right: 20px;
+    margin-left: 20px;
   }
   padding-top: 16px;
-  max-width: 580px;
-  margin: auto;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+  text-align: center;
+  display: block;
+
+  margin-bottom: 50px;
+  align-content: center;
 }
 
 .label__bottom {
   // Добавляем при нажатии на label
   border-bottom: 2px solid $labelBottom;
-  padding-bottom: 10px;
 }
 .content__grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
 }
 .wrap__title {
-  padding-left: 30px;
   .h3Bottom {
+    margin-left: 20px;
     width: 25px;
     border-bottom: 1px solid $labelBottom;
     margin-bottom: 25px;
@@ -43,62 +46,71 @@
     font-weight: 400;
   }
   h3 {
+    margin-left: 20px;
     width: 140px;
     padding-bottom: 15px;
   }
   h5 {
+    color: $pColor;
+    margin-left: 20px;
     margin-bottom: 20px;
   }
-}
-//images
-.img__wrap {
-  display: grid;
-  transition: 0.4s;
-}
-
-.closeMe {
-    display: none;
-}
-
-.img__wrap:hover {
-  .wrap__image {
+  .img__icons {
+    margin-left: 20px;
     img {
-      transition: 0.5s;
-      opacity: 0.25;
+      cursor: pointer;
+      width: 28px;
     }
   }
 }
 
-.wrap__image {
-  margin: 5px;
-  grid-area: 1 / 1 / 2 / 3;
-  display: grid;
-  img {
-    z-index: 1;
-    grid-area: 1 / 1 / 2 / 2;
-  }
-  .image__hover {
-    z-index: 0;
-    grid-area: 1 / 1 / 2 / 2;
-    background: black;
-  }
-}
-
+//text
 .wrap__title {
-  opacity: 0;
   z-index: 1;
-  color: $portTitle;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+  background: rgba(0, 0, 0, 0.7);
+  /* position the text in t’ middle*/
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-left: 10px;
-  grid-area: 1 / 1 / 2 / 2;
-  transition: 0.5s;
-}
 
-.img__icons {
+  justify-content: center;
+}
+//text
+
+//images
+.wrap__image {
+  line-height: 0;
+  overflow: hidden;
   img {
-    cursor: pointer;
-    width: 28px;
+    filter: blur(0px);
+    transition: filter 0.3s ease-in;
+    width: 100%; /* need to overwrite inline dimensions */
+    height: auto;
   }
 }
+
+//images
+
+//hover
+.img__wrap {
+  position: relative;
+  margin: 5px;
+}
+.img__wrap:hover .wrap__title {
+  opacity: 1;
+}
+
+//hover
+
+//img blur
+.location-listing:hover .location-image img {
+  filter: blur(2px);
+}
+
+//img blur
