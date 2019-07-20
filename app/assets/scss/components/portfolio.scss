@@ -23,7 +23,7 @@
   text-align: center;
   display: block;
 
-  margin-bottom: 50px;
+  margin-bottom: 65px;
   align-content: center;
 }
 
@@ -34,6 +34,7 @@
 .content__grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  margin-bottom: 30px;
 }
 .wrap__title {
   .h3Bottom {
@@ -114,3 +115,33 @@
 }
 
 //img blur
+
+.end__background {
+  overflow: hidden;
+  margin: 5px;
+}
+
+.end__title {
+  position: absolute;
+  align-self: center;
+  text-align: center;
+  h3 {
+    color: $white;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+  }
+  .btn1 {
+    color: $white;
+    border: 1px solid $white;;
+  }
+  
+
+  
+}
+
+.content__end {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 90px;
+}
